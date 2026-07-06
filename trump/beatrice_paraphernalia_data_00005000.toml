@@ -1,0 +1,22 @@
+[model]
+version = "2.0.0-rc.0"
+name = "data_00005000"
+description = """
+Beatrice v2 voice conversion checkpoint, trained to 5000 steps.
+Personal/private use only — not for public redistribution.
+"""
+
+[voice.0]
+name = "trump"
+description = """
+Voice conversion target trained on Donald Trump audio samples.
+Checkpoint: 5000 training steps. Quality/stability not yet
+validated against later checkpoints (10k/20k+ steps recommended
+for comparison before treating this as final).
+"""
+average_pitch = 50.875
+
+[voice.0.portrait]
+path = "noimage.png"
+description = """
+"""
