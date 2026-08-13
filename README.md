@@ -7,8 +7,7 @@ tags:
 
 # Beatrice Voice Models (Private)
 
-Personal collection of Beatrice v2 voice conversion checkpoints. **Private
-repo — do not make public or share access.** Voices are trained on real
+Personal collection of Beatrice v2 voice conversion checkpoints.** Voices are trained on real
 individuals' audio; treat accordingly.
 
 ## Structure
