@@ -6,7 +6,7 @@
 
 **Official repository of pre-trained, high-fidelity neural voice models for the Beatrice real-time voice conversion engine.**
 
-[![Website](https://img.shields.io/badge/Website-Project_Beatrice_V2-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice-v2.github.io/website/)
+[![Website](https://img.shields.io/badge/Website-Project_Beatrice_V2-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice-v2.github.io/Beatrice-website/)
 [![Hugging Face Hub](https://img.shields.io/badge/HuggingFace-SatiricalGuru%2Fbeatrice--voice--models-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/SatiricalGuru/beatrice-voice-models)
 [![GitHub Org](https://img.shields.io/badge/GitHub-Project--Beatrice--V2-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Project-Beatrice-V2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
@@ -19,7 +19,7 @@
 ## 📂 Repository Structure
 
 ```
-beatrice-voice-models/
+Beatrice-voice-models/
 ├── assets/
 │   └── beatrice-logo.png              # Official Project Beatrice V2 Logo
 ├── voice_models/
@@ -46,12 +46,12 @@ High-fidelity neural voice model trained on clean speech recordings, fully conve
 
 | File Name | Description | Size | Direct Download |
 | :--- | :--- | :---: | :---: |
-| `beatrice_paraphernalia_data_00005000.toml` | Model Configuration & Checkpoint Manifest | 568 B | [📥 Download Config](https://raw.githubusercontent.com/Project-Beatrice-V2/beatrice-voice-models/main/voice_models/trump/beatrice_paraphernalia_data_00005000.toml) |
-| `waveform_generator.bin` | Neural Vocoder Waveform Generator Weights | 7.9 MB | [📥 Download Vocoder](https://raw.githubusercontent.com/Project-Beatrice-V2/beatrice-voice-models/main/voice_models/trump/waveform_generator.bin) |
-| `phone_extractor.bin` | Phoneme Feature Extractor Weights | 7.2 MB | [📥 Download Extractor](https://raw.githubusercontent.com/Project-Beatrice-V2/beatrice-voice-models/main/voice_models/trump/phone_extractor.bin) |
-| `pitch_estimator.bin` | Pitch & Frequency Estimator Weights | 3.5 MB | [📥 Download Pitch Model](https://raw.githubusercontent.com/Project-Beatrice-V2/beatrice-voice-models/main/voice_models/trump/pitch_estimator.bin) |
-| `embedding_setter.bin` | Speaker Embedding Setter Weights | 264 KB | [📥 Download Embedding Setter](https://raw.githubusercontent.com/Project-Beatrice-V2/beatrice-voice-models/main/voice_models/trump/embedding_setter.bin) |
-| `speaker_embeddings.bin` | Target Speaker Vector Embeddings | 234 KB | [📥 Download Speaker Vector](https://raw.githubusercontent.com/Project-Beatrice-V2/beatrice-voice-models/main/voice_models/trump/speaker_embeddings.bin) |
+| `beatrice_paraphernalia_data_00005000.toml` | Model Configuration & Checkpoint Manifest | 568 B | [📥 Download Config](https://raw.githubusercontent.com/Project-Beatrice-V2/Beatrice-voice-models/main/voice_models/trump/beatrice_paraphernalia_data_00005000.toml) |
+| `waveform_generator.bin` | Neural Vocoder Waveform Generator Weights | 7.9 MB | [📥 Download Vocoder](https://raw.githubusercontent.com/Project-Beatrice-V2/Beatrice-voice-models/main/voice_models/trump/waveform_generator.bin) |
+| `phone_extractor.bin` | Phoneme Feature Extractor Weights | 7.2 MB | [📥 Download Extractor](https://raw.githubusercontent.com/Project-Beatrice-V2/Beatrice-voice-models/main/voice_models/trump/phone_extractor.bin) |
+| `pitch_estimator.bin` | Pitch & Frequency Estimator Weights | 3.5 MB | [📥 Download Pitch Model](https://raw.githubusercontent.com/Project-Beatrice-V2/Beatrice-voice-models/main/voice_models/trump/pitch_estimator.bin) |
+| `embedding_setter.bin` | Speaker Embedding Setter Weights | 264 KB | [📥 Download Embedding Setter](https://raw.githubusercontent.com/Project-Beatrice-V2/Beatrice-voice-models/main/voice_models/trump/embedding_setter.bin) |
+| `speaker_embeddings.bin` | Target Speaker Vector Embeddings | 234 KB | [📥 Download Speaker Vector](https://raw.githubusercontent.com/Project-Beatrice-V2/Beatrice-voice-models/main/voice_models/trump/speaker_embeddings.bin) |
 
 ---
 
@@ -59,7 +59,7 @@ High-fidelity neural voice model trained on clean speech recordings, fully conve
 
 ### Method 1: Clone the Entire Models Repository
 ```bash
-git clone https://github.com/Project-Beatrice-V2/beatrice-voice-models.git
+git clone https://github.com/Project-Beatrice-V2/Beatrice-voice-models.git
 ```
 
 ### Method 2: Load into Beatrice Voice Changer App
