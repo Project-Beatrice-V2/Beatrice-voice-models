@@ -1,20 +1,25 @@
-# 🎙️ Trump Neural Voice Model (Step 5000)
+# trump
 
-Pre-trained weights for the Donald Trump neural voice model, trained for the **[Project Beatrice V2](https://github.com/Project-Beatrice-V2)** real-time voice conversion engine.
+A Donald Trump impression for the [Beatrice voice changer](https://project-beatrice.vercel.app), trained for **5,000 steps** with the Beatrice trainer 2.0.0-rc.0. It has one voice, with an average pitch of 50.875 (MIDI note number).
 
-## 📦 Model Files
+**Import it:** download [trump.zip](https://github.com/Project-Beatrice-V2/Beatrice-voice-models/raw/main/downloads/trump.zip). In Beatrice, open the model menu, choose **Upload Custom Model**, pick the ZIP, name it, choose a category and click **Import**.
 
-- `beatrice_paraphernalia_data_00005000.toml`: Configuration manifest and hyperparameter definitions.
-- `waveform_generator.bin`: Neural vocoder generator weights (7.9 MB).
-- `phone_extractor.bin`: Phoneme feature extractor weights (7.2 MB).
-- `pitch_estimator.bin`: Pitch and frequency estimator weights (3.5 MB).
-- `embedding_setter.bin`: Speaker embedding setter weights (264 KB).
-- `speaker_embeddings.bin`: Target speaker vector embeddings (234 KB).
-- `noimage.png`: Target model display avatar.
+## Files
 
-## ⚡ How to Load in Beatrice Voice Changer
+| File | Bytes | SHA-256 |
+|:--|--:|:--|
+| `beatrice_paraphernalia_data_00005000.toml` | 568 | |
+| `phone_extractor.bin` | 7,244,608 | `6802d2b5fb6d36c7bdac5589f0a3b0911a2f1967307ff6e98ce16cb7fe3915b7` |
+| `pitch_estimator.bin` | 3,499,136 | `fcb47ba5250362b8c37d0ce64dee8ba074d4c43d14c524eb3e48688c282d01dc` |
+| `waveform_generator.bin` | 7,921,664 | `90f58e06ad7e82ff9866380ea545667408652cfc29ce193501fa9eaf3aa197c7` |
+| `embedding_setter.bin` | 264,192 | `0856f6e13924b1c307ebf82d13c543dab8123658e0e69def336216385c865211` |
+| `speaker_embeddings.bin` | 234,496 | `e7d689f10fef265343306481428d7b59b785a1efcb6d5008b96e20096fd5ca68` |
+| `noimage.png` | 388,874 | Placeholder portrait from the trainer |
 
-1. Open **Beatrice Voice Changer** on macOS (Metal/MPS) or Windows (CUDA/DirectML).
-2. Under **Model / Target Voice**, select **Load Directory** or choose `beatrice_paraphernalia_data_00005000.toml`.
-3. Set your microphone as input and virtual cable (BlackHole / VB-Cable) as output.
-4. Begin real-time voice conversion!
+`downloads/trump.zip` holds these files in one `beatrice_paraphernalia_trump_00005000/` folder. Its SHA-256 is `adcc07b036e8b3119c599483f78c3b46d58d55cc0106a100c53858c58adbb4bb`.
+
+## Notes
+
+- The manifest marks the model as **personal/private use only** and an early checkpoint that hasn't been compared with longer training (10k+ steps).
+- The training dataset isn't recorded with the model.
+- It imitates a real public figure and isn't affiliated with or endorsed by him. See [Responsible use](../../README.md#-responsible-use).
