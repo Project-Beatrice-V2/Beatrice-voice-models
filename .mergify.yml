@@ -13,9 +13,11 @@ pull_request_rules:
       - "#approved-reviews-by >= 1"
       - "#changes-requested-reviews-by = 0"
       - "#commits-behind = 0"
-      - check-success = Model validation
-      - check-success = Review policy
-      - check-success = CodeQL analysis
+      - "#check-failure = 0"
+      - check-success = @github-actions/Model validation
+      - check-success = @github-actions/Review policy
+      - check-success = @github-actions/CodeQL analysis
+      - check-success = @github-advanced-security/CodeQL
     actions:
       merge:
         method: squash
