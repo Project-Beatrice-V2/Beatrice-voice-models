@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  models:
+    name: Model validation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Verify model metadata and download archives
+        run: |
+          python - <<'PYTHON'
+          from pathlib import Path, PurePosixPath
+          from zipfile import ZipFile
+          import tomllib
+
+          metadata = sorted(Path('voice_models').rglob('*.toml'))
+          archives = sorted(Path('downloads').glob('*.zip'))
+          if not metadata or not archives:
+              raise SystemExit('Model metadata and downloadable archives are required')
+          for path in metadata:
+              with path.open('rb') as manifest:
+                  model = tomllib.load(manifest)
+              if not model.get('model') or not model.get('voice'):
+                  raise SystemExit(f'Missing model or voice metadata in {path}')
+          for path in archives:
+              with ZipFile(path) as archive:
+                  for name in archive.namelist():
+                      entry = PurePosixPath(name)
+                      if entry.is_absolute() or '..' in entry.parts or chr(92) in name:
+                          raise SystemExit(f'Unsafe ZIP entry in {path}')
+                  corrupt = archive.testzip()
+                  if corrupt:
+                      raise SystemExit(f'Corrupt ZIP entry in {path}: {corrupt}')
+              print(f'Validated {path}')
+          PYTHON
