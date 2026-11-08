@@ -1,3 +1,5 @@
+[![CI](https://github.com/Project-Beatrice-V2/Beatrice-voice-models/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Project-Beatrice-V2/Beatrice-voice-models/actions/workflows/ci.yml) [![CodeQL](https://github.com/Project-Beatrice-V2/Beatrice-voice-models/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/Project-Beatrice-V2/Beatrice-voice-models/actions/workflows/codeql.yml) [![PR policy](https://github.com/Project-Beatrice-V2/Beatrice-voice-models/actions/workflows/pr-policy.yml/badge.svg?event=pull_request)](https://github.com/Project-Beatrice-V2/Beatrice-voice-models/actions/workflows/pr-policy.yml)
+
 <div align="center">
 
 <img src="docs/media/app-icon.png" alt="Beatrice app icon" width="128" />
@@ -127,3 +129,7 @@ The repository's code and documentation are **MIT** licensed, © 2026 Project Be
 <a href="#beatrice-voice-models">Back to top ↑</a>
 
 </div>
+
+## Repository automation
+
+See the [organization automation guide](https://github.com/Project-Beatrice-V2/.github/blob/main/docs/automation.md) for checks, contribution policies, and integration setup.
